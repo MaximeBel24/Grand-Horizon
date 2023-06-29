@@ -5,37 +5,7 @@
 {% block body %}
 
     <h1 class="text-center mt-4 mb-4 titre">Historique des commentaires</h1>
-    <div class="text-center">
-        {# <a class="btn btn-primary text-warning rounded mb-4" href="{{path('form_commentaire')}}">Ajouter un Commentaire</a> #}
-        <a class="btn btn-primary text-warning rounded mb-4" href="" id="btnAjouterCommentaire">Ajouter un Commentaire</a>
-    </div>
-
-    <div id="formulaireCommentaire" class="mb-5 container" style="display: none;">
-        <h2 class="text-center mt-4">Laissez nous un commentaire</h2>
-
-        {{ form_start(form) }}
-        <div class="row mx-3">
-            <div class="col-md-6">
-              {{ form_row(form.prenom) }}
-            </div>
-            <div class="col-md-6">
-            {{ form_row(form.nom)}}
-            </div>
-            <div class="col-md-6"> 
-            {{ form_row(form.email)}}
-            </div>
-            <div class="col-md-6"> 
-            {{ form_row(form.note)}}
-            </div>
-            {{ form_row(form.contenu)}}
-        </div>
-        <div class="text-center">
-            <button class="btn btn-primary mt-2 rounded text-warning" type="submit">Valider</button>
-        </div>
-        {{ form_end(form) }}
-    </div>
     
-
     {% for commentaire in commentaires %}
     <div class="commentaire-card mb-12 text-center mb-4 " id="massage-relaxant">
         <h3>{{ commentaire.prenom }} {{commentaire.nom}}</h3>
@@ -85,6 +55,35 @@
         </div>
     </div>
     {% endfor %}
+
+    <div class="text-center">
+    <a class="btn btn-primary text-warning rounded mb-4" href="" id="btnAjouterCommentaire">Ajouter un Commentaire</a>
+    </div>
+
+    <div id="formulaireCommentaire" class="mb-5 container" style="display: none;">
+        <h2 class="text-center mt-4">Laissez nous un commentaire</h2>
+
+        {{ form_start(form) }}
+        <div class="row mx-3">
+            <div class="col-md-6">
+              {{ form_row(form.prenom) }}
+            </div>
+            <div class="col-md-6">
+            {{ form_row(form.nom)}}
+            </div>
+            <div class="col-md-6"> 
+            {{ form_row(form.email)}}
+            </div>
+            <div class="col-md-6"> 
+            {{ form_row(form.note)}}
+            </div>
+            {{ form_row(form.contenu)}}
+        </div>
+        <div class="text-center">
+            <button class="btn btn-primary mt-2 rounded text-warning" type="submit">Valider</button>
+        </div>
+        {{ form_end(form) }}
+    </div>
 
     <footer class="bg-primary">
         <div class="container">

@@ -47,6 +47,14 @@ class AppController extends AbstractController
         return $this->render('app/spa.html.twig');
     }
 
+    #[Route('/actualites', name: 'actualites')]
+    public function actualites(): Response
+    {
+        return $this->render('app/actualites.html.twig');
+    }
+
+    
+
     // ###################  CHAMBRE ########################
 
     #[Route('/chambre', name: 'chambre')]
