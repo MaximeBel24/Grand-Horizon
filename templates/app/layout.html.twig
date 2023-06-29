@@ -1,0 +1,17 @@
+
+{% block modal %}
+        
+      
+      <div class="modal fade" id="commentaire" tabindex="-1" aria-labelledby="commentaireLabel" aria-hidden="true">>
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+      
+            <div class="modal-body border border-primary rounded m-0 p-2">
+            <div class="p-3  rounded">
+              {{ render(controller('App\\Controller\\AppController::formCommentaire')) }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endblock modal %}

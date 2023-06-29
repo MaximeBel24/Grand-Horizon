@@ -1,0 +1,202 @@
+{% extends 'base.html.twig' %}
+ {% block title %}
+    Grand Horizon - Spa
+ {% endblock title %}
+
+ {% block body %}
+
+<div class="container">
+    <h1 class="text-center mt-4 mb-4 titre titre-page">Service spa</h1>
+    <p class="lead text-center">Découvrez l'ultime havre de détente et de bien-être au cœur de notre spa.</p>
+
+    <div class="text-center">
+        <img src="{{asset('assets/img/spa.jpg')}}" alt="Image 1" class="img-resto rounded" >
+        <p class="mt-4">Détendez-vous et ressourcez-vous dans notre service spa exclusif. Notre équipe de professionnels qualifiés met à votre disposition une gamme complète de soins et de massages relaxants, conçus pour vous offrir un moment de pure détente. Laissez-vous choyer dans un environnement calme et apaisant, où votre bien-être est notre priorité.</p>
+    </div>
+    
+    <div class="dish mt-4 mb-4">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-8 text-center">
+              
+              <div class="description mt-4 mb-4">Notre spa est un havre de paix où vous pouvez échapper au rythme effréné de la vie quotidienne. Dès votre arrivée, vous serez accueilli par notre personnel attentionné, qui veillera à ce que vous vous sentiez immédiatement à l'aise et détendu. Que vous souhaitiez profiter d'un massage relaxant, d'un soin du visage revitalisant ou d'un rituel de spa complet, nous avons des options adaptées à vos besoins.
+              </div>
+              <div class="description mt-4 mb-4">Nos installations de spa sont conçues pour vous offrir une expérience de luxe ultime. Vous pourrez vous détendre dans notre sauna, vous ressourcer dans notre hammam ou profiter d'un bain apaisant dans notre jacuzzi. Nous utilisons des produits de spa de haute qualité, formulés avec des ingrédients naturels et bénéfiques pour la peau, afin de vous offrir des soins de la plus haute qualité.
+            </div>
+            </div>            
+            <div class="col-md-4 d-flex justify-content-center">
+              <img src="{{asset('assets/img/spa3.jpg')}}" alt="" class="rounded resto-img">
+            </div>
+          </div>
+    </div>
+  
+    <div class="dish mt-4 mb-4">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-4 d-flex justify-content-center">
+                <img src="{{asset('assets/img/spa1.jpg')}}" alt="" class="rounded resto-img ">
+            </div>
+            <div class="col-md-8 text-center">
+                <div class="description mt-4 mb-4">En plus de nos soins individuels, nous proposons également des forfaits spa spécialement conçus pour vous offrir une expérience complète de bien-être. Que vous veniez seul, en couple ou entre amis, nos forfaits vous permettront de vous immerger dans un univers de détente et de plaisir. Laissez notre équipe experte prendre soin de vous et vous guider vers un état de relaxation profonde.</div>
+                <div class="description mt-4 mb-4">Nous comprenons que chaque individu est unique, c'est pourquoi nous proposons des soins personnalisés qui répondent à vos besoins spécifiques. Notre équipe de thérapeutes qualifiés écoutera attentivement vos préférences et adaptera les soins en fonction de vos attentes. Notre objectif est de vous offrir une expérience de spa sur mesure qui vous laissera revigoré, rajeuni et revitalisé.</div>
+              </div>
+        </div>
+    </div>    
+   
+    <div class="dish mt-4 mb-4">
+        <div class="row d-flex align-items-center gap">
+            <div class="col-md-8 text-center">
+              
+              <div class="description mt-4 mb-4">Que vous recherchiez une évasion tranquille en solo, une escapade romantique avec votre partenaire ou un moment de détente entre amis, notre service spa est l'endroit idéal pour vous ressourcer. Nous vous invitons à réserver votre séance de spa dès maintenant et à vous préparer à une expérience de bien-être exceptionnelle.
+              </div>
+              
+            </div>            
+            <div class="col-md-4 d-flex justify-content-center">
+              <img src="{{asset('assets/img/spa2.jpg')}}" alt="" class="rounded resto-img">
+            </div>
+          </div>
+    </div>
+  </div>
+</div> 
+
+<h2 class="text-center mt-4 mb-4">Formules proposée</h2>
+<div class="container mt-4 mb-4">
+  <div class="row">
+    <div class="col-md-4 d-flex flex-column">
+
+        <button type="button" class="btn btn-primary text-warning btn-block rounded " onclick="showCard('massage-relaxant')">Massage Relaxant</button>
+        <button type="button" class="btn btn-primary text-warning btn-block mt-1 rounded" onclick="showCard('massage-pierres-chaudes')">Massage aux pierres chaudes</button>
+        <button type="button" class="btn btn-primary text-warning btn-block mt-1 rounded" onclick="showCard('massage-suedois')">MASSAGE SUÉDOIS</button>
+        <button type="button" class="btn btn-primary text-warning btn-block mt-1 rounded" onclick="showCard('massage-duo')">MASSAGE EN DUO AUX HUILES ESSENTIELLES</button>
+        <button type="button" class="btn btn-primary text-warning btn-block mt-1 rounded" onclick="showCard('soin-visage-hydratant')">SOIN DU VISAGE HYDRATANT</button>
+        <button type="button" class="btn btn-primary text-warning btn-block mt-1 rounded" onclick="showCard('soin-visage-anti-age')">SOIN DU VISAGE ANTI-ÂGE</button>
+        <button type="button" class="btn btn-primary text-warning btn-block mt-1 rounded" onclick="showCard('gommage-corps')">GOMMAGE DU CORPS AUX SELS MARINS</button>
+      
+    </div>
+    <div class="col-md-8">
+      <div class="restaurant-card mb-4" id="massage-relaxant">
+        <h3>Massage relaxant aux huiles essentielles</h3>
+        <div class="dish">
+          <div class="row d-flex align-items-center">
+            <div class="col-md-8 text-center">
+              <div class="name">Massage relaxant aux huiles essentielles</div>
+              <div class="description mt-4 mb-4">Ce massage est conçu pour vous offrir une relaxation profonde et soulager les tensions musculaires. Nos thérapeutes utilisent des huiles essentielles spécialement sélectionnées pour leurs propriétés apaisantes. Les mouvements lents et fluides combinés à une pression légère à moyenne favorisent la détente totale du corps et de l'esprit.</div>
+              <div class="price">60€</div>
+            </div>            
+            <div class="col-md-4">
+              <img src="{{asset('assets/img/massage1.jpg')}}" alt="Massage relaxant aux huiles essentielles" class="rounded img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="restaurant-card mb-4" id="massage-pierres-chaudes">
+        <h3>Massage aux pierres chaudes</h3>
+        <div class="dish">
+          <div class="row d-flex align-items-center">
+            <div class="col-md-4">
+              <img src="{{asset('assets/img/massage2.png')}}" alt="Massage aux pierres chaudes" class="rounded img-fluid">
+            </div>
+            <div class="col-md-8 text-center">
+              <div class="name">Massage aux pierres chaudes</div>
+              <div class="description mt-4 mb-4">Ce massage utilise des pierres de basalte chauffées pour apporter une chaleur réconfortante à votre corps. Les pierres sont placées stratégiquement le long de votre colonne vertébrale et utilisées pour masser en profondeur vos muscles. La combinaison de la chaleur et des mouvements de glissement favorise la relaxation musculaire, améliore la circulation sanguine et aide à dissiper les tensions.</div>
+              <div class="price">80€</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="restaurant-card mb-4" id="massage-suedois">
+        <h3>Massage suédois</h3>
+        <div class="dish">
+          <div class="row d-flex align-items-center">
+            <div class="col-md-8 text-center">
+              <div class="name">Massage suédois</div>
+              <div class="description mt-4 mb-4">Le massage suédois est une technique de massage classique qui combine des mouvements de pétrissage, d'effleurage, de friction et de percussion. Ce massage vise à améliorer la circulation sanguine, détendre les muscles tendus et stimuler le système lymphatique. Il peut être adapté en fonction de vos préférences de pression, que vous préfériez un massage plus doux ou plus profond.</div>
+              <div class="price">70€</div>
+            </div>            
+            <div class="col-md-4">
+              <img src="{{asset('assets/img/massage3.jpg')}}" alt="Massage suédois" class="rounded img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="restaurant-card mb-4" id="massage-duo">
+        <h3>Massage en duo aux huiles essentielles</h3>
+        <div class="dish">
+          <div class="row d-flex align-items-center">
+            <div class="col-md-4">
+              <img src="{{asset('assets/img/massage4.jpg')}}" alt="Massage en duo aux huiles essentielles" class="rounded img-fluid">
+            </div>
+            <div class="col-md-8 text-center">
+              <div class="name">Massage en duo aux huiles essentielles</div>
+              <div class="description mt-4 mb-4">Ce massage est spécialement conçu pour être apprécié en couple ou entre amis. Vous et votre partenaire serez massés en même temps dans une atmosphère paisible et relaxante. Nos thérapeutes utiliseront des huiles essentielles pour créer une expérience sensorielle unique, favorisant la détente et la complicité.</div>
+              <div class="price">120€</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="restaurant-card mb-4" id="soin-visage-hydratant">
+        <h3>Soin du visage hydratant</h3>
+        <div class="dish">
+          <div class="row d-flex align-items-center">
+            <div class="col-md-8 text-center">
+              <div class="name">Soin du visage hydratant</div>
+              <div class="description mt-4 mb-4">Ce soin du visage vise à hydrater et revitaliser votre peau. Il commence par un nettoyage en profondeur pour éliminer les impuretés, suivi d'un gommage doux pour exfolier les cellules mortes. Ensuite, un masque hydratant adapté à votre type de peau est appliqué pour nourrir et régénérer votre peau. Le soin se termine par un massage du visage, du cou et des épaules pour une relaxation totale.</div>
+              <div class="price">50€</div>
+            </div>            
+            <div class="col-md-4">
+              <img src="{{asset('assets/img/face1.jpg')}}" alt="Soin du visage hydratant" class="rounded img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="restaurant-card mb-4" id="soin-visage-anti-age">
+        <h3>Soin du visage anti-âge</h3>
+        <div class="dish">
+          <div class="row d-flex align-items-center">
+            <div class="col-md-4">
+              <img src="{{asset('assets/img/face2.jpg')}}" alt="Soin du visage anti-âge" class="rounded img-fluid">
+            </div>
+            <div class="col-md-8 text-center">
+              <div class="name">Soin du visage anti-âge</div>
+              <div class="description mt-4 mb-4">Ce soin du visage est conçu pour lutter contre les signes du vieillissement cutané. Il comprend un nettoyage en profondeur, une exfoliation douce pour éliminer les cellules mortes, suivi d'un massage facial stimulant pour raffermir la peau. Un masque anti-âge intensif est ensuite appliqué pour hydrater en profondeur et réduire l'apparence des rides et des ridules.</div>
+              <div class="price">75€</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="restaurant-card mb-4" id="gommage-corps">
+        <h3>Gommage du corps aux sels marins</h3>
+        <div class="dish">
+          <div class="row d-flex align-items-center">
+            <div class="col-md-8 text-center">
+              <div class="name">Gommage du corps aux sels marins</div>
+              <div class="description mt-4 mb-4">Ce gommage corporel utilise un mélange de sels marins et d'huiles essentielles pour exfolier délicatement votre peau et éliminer les cellules mortes. Les mouvements circulaires stimulent la circulation sanguine et laissent votre peau douce, lisse et revitalisée.</div>
+              <div class="price">45€</div>
+            </div>            
+            <div class="col-md-4">
+              <img src="{{asset('assets/img/body1.jpg')}}" alt="Gommage du corps aux sels marins" class="rounded img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div> btn-block
+<footer class="bg-primary">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="footer-text">&copy; 2023 Hôtel Grand Horizon. Tous droits réservés.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a href="#" class="scroll-to-top" title="Remonter en haut de la page">&#8593;</a>
+  <script src="{{ asset('assets/js/main.js')}}"></script>
+  <script src="{{ asset('assets/js/restaurant.js')}}"></script>
+
+ {% endblock body %}

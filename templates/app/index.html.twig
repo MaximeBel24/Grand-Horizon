@@ -1,0 +1,131 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AppController!{% endblock %}
+
+{% block body %}
+
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+  <div class="carousel-indicators">
+    {% for slider in sliders %}
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="{{ loop.index0 }}" {% if loop.first %} class="active" {% endif %} aria-label="Slide {{ loop.index }}"></button>
+    {% endfor %}
+  </div>
+  <div class="carousel-inner">
+    {% for slider in sliders %}
+    <div class="carousel-item {% if loop.first %} active {% endif %}">
+      <img src="{{ asset('uploads/images/' ~ slider.photo) }}" class="carousel-img d-block w-100" alt="Slider Image">
+      <div class="carousel-caption d-none d-md-block">
+        <p class="h4">{{slider.description}}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        <h1 class="titre">Grand Horizon</h1>
+        <p class="lead mt-5">Bienvenue à l'hôtel Grand Horizon, une nouvelle référence de grand standing en bord de mer, situé dans les magnifiques îles tropicales des Maldives. Depuis notre implantation il y a un mois, nous nous efforçons de vous offrir une expérience exceptionnelle, alliant confort, gastronomie et bien-être dans un cadre paradisiaque.</p>
+      </div>
+    </div>
+  </div>
+  
+    <div class="row mt-5 container-card">
+      <div class="container d-flex justify-content-center">
+
+        <div class="col-12 col-md-3 m-3 card-accueil">
+          <div class="card bg-primary mb-3 h-100 rounded">
+            <div class="card-header text-center text-warning d-flex flex-column">
+              <a href="{{path('chambre')}}" class="text-center">
+              <img src="{{asset('assets/img/chambre.jpg')}}" alt="Chambres haut de gamme" class="img-accueil img-fluid mt-3">
+              </a>
+              <a href="{{path('chambre')}}" class="mt-4 mb-4 h3 accueil-link">Chambres haut de gamme</a>
+            </div>
+            <div class="card-body bg-light">
+              <p>Nos chambres haut de gamme offrent une vue spectaculaire sur les eaux cristallines de l'océan, vous permettant de vous réveiller chaque matin avec une sensation de paix et de sérénité. Chaque détail a été soigneusement pensé pour vous offrir un espace élégant et raffiné, où le confort et la détente sont au rendez-vous. Des matériaux de qualité, une décoration tropicale et des équipements haut de gamme sont autant d'éléments qui contribuent à créer une atmosphère luxueuse et apaisante dans chaque chambre</p>
+            </div>
+            <div class="card-footer bg-primary">
+              <div class="text-center my-3">
+                <a href="{{path('chambre')}}" class="mt-4 mb-4 h3 btn btn-warning text-center rounded text-primary">Plus d'info</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-3 m-3 card-accueil">
+          <div class="card  bg-primary mb-3 h-100 rounded">
+            <div class="card-header text-center text-warning d-flex flex-column">
+              <a href="{{path('restaurant')}}" class="text-center">
+                <img src="{{asset('assets/img/restaurant.jpg')}}" alt="Restaurant de qualité" class="img-fluid img-accueil mt-3">
+              </a>
+              <a href="{{path('restaurant')}}" class="mt-4 mb-4 h3 accueil-link text-center">Restaurant de qualité</a>
+            </div>
+            <div class="card-body bg-light">
+              <p>Notre restaurant vous propose une expérience culinaire exquise et unique. Notre chef talentueux utilise avec passion des ingrédients locaux soigneusement sélectionnés ainsi que des fruits de mer frais pour créer des plats délicieux qui éveilleront vos papilles. Que vous choisissiez de dîner en plein air, profitant d'une vue panoramique sur la plage, ou dans notre élégante salle à manger, notre restaurant vous promet un voyage gastronomique inoubliable, alliant saveurs audacieuses et présentations artistiques.</p>
+            </div>
+            <div class="card-footer bg-primary">
+              <div class="text-center my-3">
+                <a href="{{path('restaurant')}}" class="mt-4 mb-4 h3 btn btn-warning text-center rounded text-primary">Plus d'info</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-3 m-3 card-accueil">
+          <div class="card  bg-primary mb-3 h-100 rounded">
+            <div class="card-header text-center text-warning d-flex flex-column mt-3">
+              <a href="{{path('spa')}}" class="text-center">
+                <img src="{{asset('assets/img/spa.jpg')}}" alt="Service spa" class="img-accueil img-fluid">
+              </a>
+              <a href="{{path('spa')}}" class="mt-4 mb-4 h3 accueil-link text-center">Service spa de luxe</a>
+            </div>
+            <div class="card-body bg-light">
+              <p>Détendez-vous et laissez-vous choyer dans notre somptueux spa de luxe. Notre équipe expérimentée de thérapeutes qualifiés vous invite à découvrir une gamme complète de soins et de massages inspirés par la nature tropicale environnante. Imprégnez-vous des douces brises marines tandis que les senteurs envoûtantes vous transportent vers un état de relaxation profonde, où le stress et les soucis s'évanouissent comme par magie. Profitez d'un havre de paix où votre bien-être est notre priorité absolue.</p>
+            </div>
+            <div class="card-footer bg-primary">
+              <div class="text-center my-3">
+                <a href="{{path('spa')}}" class="mt-4 mb-4 h3 btn btn-warning text-center rounded text-primary">Plus d'info</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <hr>
+  
+    <div class="row mt-5">
+      <div class="col-lg-8 mx-auto text-center">
+        <p>À l'hôtel Grand Horizon, notre priorité est de vous offrir un service impeccable et personnalisé. Notre équipe dévouée est à votre disposition pour répondre à tous vos besoins et rendre votre séjour aussi agréable que possible. Que vous soyez ici pour une escapade romantique, une lune de miel ou des vacances en famille, nous mettons tout en œuvre pour que votre expérience parmi nous soit mémorable.</p>
+        <p>Nous sommes impatients de vous accueillir à l'hôtel Grand Horizon, où le luxe, la tranquillité et la beauté naturelle se rencontrent pour créer une expérience paradisiaque dans les Maldives.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <footer class="bg-primary">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="footer-text">&copy; 2023 Hôtel Grand Horizon. Tous droits réservés.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a href="#" class="scroll-to-top" title="Remonter en haut de la page">&#8593;</a>
+  <script src="{{ asset('assets/js/main.js')}}"></script>
+{% endblock %}

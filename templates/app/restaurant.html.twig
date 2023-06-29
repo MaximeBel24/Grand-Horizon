@@ -1,0 +1,540 @@
+{% extends 'base.html.twig' %}
+ {% block title %}
+    Restaurant
+ {% endblock title %}
+
+ {% block body %}
+
+<div class="container">
+    <h1 class="text-center mt-4 mb-4 titre titre-page">Bienvenue dans notre restaurant</h1>
+    <p class="lead text-center">Un lieu où la passion pour la cuisine se mêle à l'art de recevoir.</p>
+    
+    <div class="text-center">
+      <img src="{{asset('assets/img/restaurant.jpg')}}" alt="Image 1" class="img-resto rounded" >
+  
+        <p class="mt-3">Nous vous convions à un voyage culinaire exceptionnel, où chaque bouchée est une promesse de saveurs exquises et d'émotions gustatives.</p>
+    </div>
+  
+    <div class="dish mt-4 mb-4">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-8 text-center">
+              
+              <div class="description mt-4 mb-4">Notre chef talentueux est un véritable artiste des fourneaux. Inspiré par les traditions culinaires du monde entier, il élabore des plats savoureux en utilisant uniquement des produits frais, locaux et de saison. Chaque ingrédient est sélectionné avec soin, mettant en valeur sa fraîcheur et sa qualité, pour vous offrir une expérience gastronomique inoubliable.
+              </div>
+              <div class="description mt-4 mb-4">Dès votre arrivée, vous serez accueilli chaleureusement par notre équipe attentionnée et professionnelle. Notre sommelier se fera un plaisir de vous conseiller parmi notre vaste sélection de vins soigneusement choisis pour sublimer chaque plat. L'ambiance élégante et raffinée de notre salle à manger crée un cadre idéal, que ce soit pour un déjeuner d'affaires, un dîner romantique ou un repas entre amis
+            </div>
+            </div>            
+            <div class="col-md-4 d-flex justify-content-center">
+              <img src="{{asset('assets/img/resto.jpg')}}" alt="Assiette de fromages et de charcuterie" class="rounded resto-img">
+            </div>
+          </div>
+    </div>
+
+    <div class="dish mt-4 mb-4">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-4 d-flex justify-content-center">
+                <img src="{{asset('assets/img/saumon.jpg')}}" alt="Tartare de saumon" class="rounded resto-img">
+            </div>
+            <div class="col-md-8 text-center">
+                <div class="description mt-4 mb-4">Chaque assiette qui vous sera présentée est une œuvre d'art gastronomique, magnifiquement dressée avec une attention méticuleuse aux détails. Les saveurs s'entremêlent harmonieusement, créant des combinaisons surprenantes et délicates qui éveilleront vos papilles.</div>
+                <div class="description mt-4 mb-4">Notre menu est conçu pour satisfaire les palais les plus fins, avec une variété de plats alliant innovation et tradition. Des entrées délicates aux desserts somptueux, chaque étape de votre repas sera une découverte gustative. Nos plats végétariens et végétaliens sont également soigneusement élaborés, offrant une expérience culinaire exceptionnelle à tous les convives..</div>
+              </div>
+        </div>
+    </div>    
+
+    <div class="dish mt-4 mb-4">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-8 text-center">
+              
+              <div class="description mt-4 mb-4">Nous croyons fermement que la gastronomie est une expérience sociale à partager. C'est pourquoi notre restaurant est l'endroit idéal pour célébrer des moments précieux avec vos proches. Notre espace privé est disponible pour les occasions spéciales, vous permettant ainsi de profiter d'une intimité accrue tout en savourant nos délices culinaires.
+              </div>
+              <div class="description mt-4 mb-4">Lorsque vous quittez notre restaurant, nous espérons que vous emporterez avec vous des souvenirs gastronomiques durables. Notre objectif est de vous offrir bien plus qu'un simple repas, mais plutôt une expérience sensorielle qui éveillera tous vos sens.
+            </div>
+            </div>            
+            <div class="col-md-4 d-flex justify-content-center">
+              <img src="{{asset('assets/img/resto3.jpg')}}" alt="Assiette de fromages et de charcuterie" class="rounded resto-img">
+            </div>
+          </div>
+    </div>   
+</div>
+
+ <h2 class="text-center mt-4 mb-4">Carte du restaurant</h2>
+<div class="container text-center mb-4">
+ <button type="button" class="btn btn-primary text-warning rounded" onclick="showCard('entrée')">Entrée</button>
+  <button type="button" class="btn btn-primary text-warning rounded" onclick="showCard('plats')">Plats</button>
+  <button type="button" class="btn btn-primary text-warning rounded" onclick="showCard('desserts')">Desserts</button>
+  <button type="button" class="btn btn-primary text-warning rounded" onclick="showCard('boissons')">Boissons</button>
+</div>
+
+ <div class="restaurant-card mb-4" id="entrée">
+    <h3>Entrée</h3>
+    <div class="dish">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-8 text-center">
+              <div class="name">Assiette de fromages et de charcuterie</div>
+              <div class="description mt-4 mb-4">Une sélection de fromages fins, accompagnée de tranches de charcuterie variées, de confitures, de noix et de pains frais.</div>
+              <div class="price">12.99€</div>
+            </div>            
+            <div class="col-md-4">
+              <img src="{{asset('assets/img/cheese.jpg')}}" alt="Assiette de fromages et de charcuterie" class="rounded">
+            </div>
+          </div>
+    </div>
+    <hr>
+    <div class="dish ">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-4">
+                <img src="{{asset('assets/img/saumon.jpg')}}" alt="Tartare de saumon" class="rounded">
+            </div>
+            <div class="col-md-8 text-center">
+                <div class="name">Tartare de saumon</div>
+                <div class="description mt-4 mb-4">Un tartare de saumon frais assaisonné avec des herbes, des agrumes et des épices. Servie avec des blinis ou des croûtons croustillants.</div>
+                <div class="price">14.99€</div>
+              </div>
+        </div>
+    </div>
+    <hr>
+    <div class="dish">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-8 text-center">
+              <div class="name">Salade de chèvre chaud</div>
+              <div class="description mt-4 mb-4">Une salade composée de jeunes pousses, de tomates cerises, de noix et de tranches de fromage de chèvre grillées. Arroser d'une vinaigrette au vinaigre balsamique.</div>
+              <div class="price">9.99€</div>
+            </div>            
+            <div class="col-md-4">
+              <img src="{{asset('assets/img/chevre.jpg')}}" alt="Salade de chèvre chaud" class="rounded">
+            </div>
+          </div>
+    </div>
+    <hr>
+    <div class="dish">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-4">
+                <img src="{{asset('assets/img/printemps.jpg')}}" alt="Rouleaux de printemps" class="rounded">
+            </div>
+            <div class="col-md-8 text-center">
+                <div class="name">Rouleaux de printemps</div>
+                <div class="description mt-4 mb-4">Des rouleaux de printemps frais remplis de légumes croquants tels que des carottes, des concombres, des poivrons et de la menthe. Servie avec une sauce aigre-douce ou une sauce aux arachides.</div>
+                <div class="price">9.99€</div>
+              </div>
+        </div>
+    </div>
+    <hr>
+    <div class="dish">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-8 text-center">
+              <div class="name">Soupe du jour</div>
+              <div class="description mt-4 mb-4">Une soupe préparée avec les ingrédients frais du jour. Demandez à notre personnel pour connaître la variété du jour.</div>
+              <div class="price">6.99€</div>
+            </div>            
+            <div class="col-md-4">
+              <img src="{{asset('assets/img/soup.jpg')}}" alt="Soupe du jour" class="rounded">
+            </div>
+          </div>
+    </div>
+    <hr>
+    <div class="dish">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-4">
+                <img src="{{asset('assets/img/tempura.jpg')}}" alt="Tempura de légumes" class="rounded">
+            </div>
+            <div class="col-md-8 text-center">
+                <div class="name">Tempura de légumes</div>
+                <div class="description mt-4 mb-4">Des légumes frais enrobés d'une pâte légère et croustillante, frits jusqu'à obtenir une texture dorée et servis avec une sauce de trempage.</div>
+                <div class="price">10.99€</div>
+              </div>
+        </div>
+    </div>
+    <hr>
+    <div class="dish">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-8 text-center">
+              <div class="name">Carpaccio de bœuf</div>
+              <div class="description mt-4 mb-4">De fines tranches de bœuf cru assaisonnées avec de l'huile d'olive, du citron, du parmesan et des câpres. Accompagnées de roquette et de copeaux de parmesan.</div>
+              <div class="price">13.99€</div>
+            </div>            
+            <div class="col-md-4">
+              <img src="{{asset('assets/img/carpaccio.jpg')}}" alt="Carpaccio de bœuf" class="rounded">
+            </div>
+          </div>
+    </div>
+    <hr>
+    <div class="dish">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-4">
+                <img src="{{asset('assets/img/quiches.jpg')}}" alt="Mini quiches" class="rounded">
+            </div>
+            <div class="col-md-8 text-center">
+                <div class="name">Mini quiches</div>
+                <div class="description mt-4 mb-4">De délicieuses mini-quiches individuelles avec différentes garnitures, telles que des légumes, du fromage ou des fruits de mer. Parfaites pour une entrée légère.</div>
+                <div class="price">8.99€</div>
+              </div>
+        </div>
+    </div>
+    <hr>
+    <div class="dish">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-8 text-center">
+              <div class="name">Bruschetta</div>
+              <div class="description mt-4 mb-4">Des tranches de pain grillées garnies de tomates fraîches, de basilic, d'ail et d'huile d'olive. Une entrée italienne savoureuse et légère.</div>
+              <div class="price">7.99€</div>
+            </div>            
+            <div class="col-md-4">
+              <img src="{{asset('assets/img/bruschetta.jpg')}}" alt="Bruschetta" class="rounded">
+            </div>
+          </div>
+    </div>
+    <hr>
+    <div class="dish">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-4">
+                <img src="{{asset('assets/img/crevettes.jpg')}}" alt="Crevettes grillées à l'ail" class="rounded">
+            </div>
+            <div class="col-md-8 text-center">
+                <div class="name">Crevettes grillées à l'ail</div>
+                <div class="description mt-4 mb-4">De grosses crevettes grillées avec de l'ail, du persil et du beurre. Servies avec une sauce au citron et du pain grillé.</div>
+                <div class="price">11.99€</div>
+              </div>
+        </div>
+    </div>   
+</div>
+
+<div class="restaurant-card mb-4" id="plats">
+    <h3>Plats</h3>
+    <div class="dish">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-8 text-center">
+              <div class="name">Filet de bœuf sauce au poivre</div>
+              <div class="description mt-4 mb-4">Un filet de bœuf tendre et juteux accompagné d'une sauce au poivre corsée. Servie avec des légumes de saison et des pommes de terre sautées</div>
+              <div class="price">24.99€</div>
+            </div>            
+            <div class="col-md-4">
+              <img src="{{asset('assets/img/boeuf.jpg')}}" alt="Filet de bœuf sauce au poivre" class="rounded">
+            </div>
+          </div>
+    </div>
+    <hr>
+    <div class="dish ">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-4">
+                <img src="{{asset('assets/img/risotto.jpg')}}" alt="Risotto aux champignons sauvages" class="rounded">
+            </div>
+            <div class="col-md-8 text-center">
+                <div class="name">Risotto aux champignons sauvages</div>
+                <div class="description mt-4 mb-4">Un risotto crémeux préparé avec des champignons sauvages, du bouillon de légumes, du parmesan, des herbes fraîches et une touche de truffe pour une saveur encore plus raffinée.</div>
+                <div class="price">18.99€</div>
+              </div>
+        </div>
+    </div>
+    <hr>
+    <div class="dish">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-8 text-center">
+              <div class="name">Linguine aux fruits de mer</div>
+              <div class="description mt-4 mb-4">Des pâtes linguine fraîches garnies de crevettes, de moules et de calamars dans une sauce tomate parfumée à l'ail et aux herbes.</div>
+              <div class="price">20.99€</div>
+            </div>            
+            <div class="col-md-4">
+              <img src="{{asset('assets/img/linguinne.jpg')}}" alt="Linguine aux fruits de mer" class="rounded">
+            </div>
+          </div>
+    </div>
+    <hr>
+    <div class="dish">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-4">
+                <img src="{{asset('assets/img/risomer.jpg')}}" alt="Risotto aux fruits de mer" class="rounded">
+            </div>
+            <div class="col-md-8 text-center">
+                <div class="name">Risotto aux fruits de mer</div>
+                <div class="description mt-4 mb-4">Un risotto crémeux garni de fruits de mer tels que les crevettes, les calmars et les moules. Assaisonner avec du persil frais et du zeste de citron pour une saveur éclatante.</div>
+                <div class="price">21.99€</div>
+              </div>
+        </div>
+    </div>
+    <hr>  
+    <div class="dish">
+      <div class="row d-flex align-items-center">
+          <div class="col-md-8 text-center">
+            <div class="name">Magret de canard sauce à l'orange</div>
+            <div class="description mt-4 mb-4">Un magret de canard grillé à la perfection et servi avec une sauce à l'orange acidulée. Accompagné de pommes de terre rôties et de légumes de saison.</div>
+            <div class="price">23.99€</div>
+          </div>            
+          <div class="col-md-4">
+            <img src="{{asset('assets/img/magret.jpg')}}" alt="Magret de canard sauce à l'orange" class="rounded">
+          </div>
+        </div>
+  </div>
+  <hr>
+  <div class="dish">
+      <div class="row d-flex align-items-center">
+          <div class="col-md-4">
+              <img src="{{asset('assets/img/poisson.jpg')}}" alt="Filet de poisson en croûte d'herbes" class="rounded">
+          </div>
+          <div class="col-md-8 text-center">
+              <div class="name">Filet de poisson en croûte d'herbes</div>
+              <div class="description mt-4 mb-4">Un filet de poisson frais enrobé d'une croûte d'herbes aromatiques, cuit au four jusqu'à obtenir une texture croustillante. Accompagné de légumes sautés.</div>
+              <div class="price">20.99€</div>
+            </div>
+      </div>
+  </div>
+  <hr>
+  <div class="dish">
+      <div class="row d-flex align-items-center">
+          <div class="col-md-8 text-center">
+            <div class="name">Côtelette d'agneau grillée</div>
+            <div class="description mt-4 mb-4">Une côtelette d'agneau juteuse et tendre grillée à la perfection. Accompagnée de purée de pommes de terre et de légumes de saison.</div>
+            <div class="price">22.99€</div>
+          </div>            
+          <div class="col-md-4">
+            <img src="{{asset('assets/img/cotelette.jpg')}}" alt="Côtelette d'agneau grillée" class="rounded">
+          </div>
+        </div>
+  </div>
+  <hr>
+  <div class="dish">
+      <div class="row d-flex align-items-center">
+          <div class="col-md-4">
+              <img src="{{asset('assets/img/poulet.jpg')}}" alt="Suprême de poulet rôti" class="rounded">
+          </div>
+          <div class="col-md-8 text-center">
+              <div class="name">Suprême de poulet rôti</div>
+              <div class="description mt-4 mb-4">Un suprême de poulet juteux et savoureux, rôti à la perfection. Accompagné de légumes grillés et d'une purée de pommes de terre crémeuse.</div>
+              <div class="price">18.99€</div>
+            </div>
+      </div>
+  </div>   
+</div> 
+</div>
+
+<div class="restaurant-card mb-4" id="desserts">
+    <h3>Desserts</h3>
+    <div class="dish">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-8 text-center">
+              <div class="name">Cheesecake aux fruits rouges</div>
+              <div class="description mt-4 mb-4">Un cheesecake crémeux à la texture lisse, garni d'un mélange de fruits rouges frais et d'une coulis de fruits rouges</div>
+              <div class="price">9.99€</div>
+            </div>            
+            <div class="col-md-4">
+              <img src="{{asset('assets/img/cheesecake.jpg')}}" alt="Cheesecake aux fruits rouges" class="rounded">
+            </div>
+          </div>
+    </div>
+    <hr>
+    <div class="dish ">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-4">
+                <img src="{{asset('assets/img/panacota.jpg')}}" alt="Panna cotta" class="rounded">
+            </div>
+            <div class="col-md-8 text-center">
+                <div class="name">Panna cotta</div>
+                <div class="description mt-4 mb-4">Un dessert italien à base de crème cuite, aromatisée à la vanille ou à d'autres saveurs, et servi avec un coulis de fruits ou un caramel.</div>
+                <div class="price">6.99€</div>
+              </div>
+        </div>
+    </div>
+    <hr>
+    <div class="dish">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-8 text-center">
+              <div class="name">Parfaits aux fruits</div>
+              <div class="description mt-4 mb-4">Des couches alternées de yaourt ou de crème légère, de fruits frais en dés et de granola croustillant.</div>
+              <div class="price">6.99€</div>
+            </div>            
+            <div class="col-md-4">
+              <img src="{{asset('assets/img/parfait.jpg')}}" alt="Parfaits aux fruits" class="rounded">
+            </div>
+          </div>
+    </div>
+    <hr>
+    <div class="dish">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-4">
+                <img src="{{asset('assets/img/creme.jpg')}}" alt="Crème Brulée" class="rounded">
+            </div>
+            <div class="col-md-8 text-center">
+                <div class="name">Crème Brulée</div>
+                <div class="description mt-4 mb-4">Une crème onctueuse à la vanille avec une fine couche caramélisée sur le dessus. Accompagnez-la de fruits frais ou de petits biscuits.</div>
+                <div class="price">6.99€</div>
+              </div>
+        </div>
+    </div>
+    <hr>
+    <div class="dish">
+      <div class="row d-flex align-items-center">
+          <div class="col-md-8 text-center">
+            <div class="name">Tarte aux pommes maison</div>
+            <div class="description mt-4 mb-4">Une délicieuse tarte aux pommes faite maison avec une pâte croustillante et une garniture généreuse de pommes fraîches et parfumées. Servie avec une boule de glace à la vanille.</div>
+            <div class="price">8.99€</div>
+          </div>            
+          <div class="col-md-4">
+            <img src="{{asset('assets/img/tarte_pommes.jpg')}}" alt="Tarte aux pommes maison" class="rounded">
+          </div>
+        </div>
+    </div>
+    <hr>
+    <div class="dish">
+      <div class="row d-flex align-items-center">
+          <div class="col-md-4">
+              <img src="{{asset('assets/img/mousse_chocolat.jpg')}}" alt="Mousse au chocolat" class="rounded">
+          </div>
+          <div class="col-md-8 text-center">
+              <div class="name">Mousse au chocolat</div>
+              <div class="description mt-4 mb-4">Une mousse légère et aérée au chocolat noir intense, servie avec une touche de crème fouettée et des copeaux de chocolat.</div>
+              <div class="price">7.99€</div>
+            </div>
+      </div>
+    </div>
+    <hr>
+    <div class="dish">
+      <div class="row d-flex align-items-center">
+          <div class="col-md-8 text-center">
+            <div class="name">Fondant au chocolat</div>
+            <div class="description mt-4 mb-4">Un gâteau au chocolat fondant et moelleux à l'intérieur, accompagné d'une boule de glace à la vanille et d'un coulis de framboises.</div>
+            <div class="price">9.99€</div>
+          </div>            
+          <div class="col-md-4">
+            <img src="{{asset('assets/img/fondant_chocolat.jpg')}}" alt="Fondant au chocolat" class="rounded">
+          </div>
+        </div>
+    </div>
+    <hr>
+    <div class="dish">
+      <div class="row d-flex align-items-center">
+          <div class="col-md-4">
+              <img src="{{asset('assets/img/tiramisu.jpg')}}" alt="Tiramisu" class="rounded">
+          </div>
+          <div class="col-md-8 text-center">
+              <div class="name">Tiramisu</div>
+              <div class="description mt-4 mb-4">Un classique italien à base de biscuits imbibés de café, de crème mascarpone et saupoudré de cacao. Un dessert léger et savoureux.</div>
+              <div class="price">8.99€</div>
+          </div>
+      </div>
+    </div>   
+  </div>   
+</div>
+
+<div class="restaurant-card mb-4" id="boissons">
+  <h3>Boissons</h3>
+
+  <div class="dish">
+      <div class="row d-flex align-items-center">
+          <div class="col-md-8 text-center">
+            <div class="name">Vin rouge</div>
+            <div class="description mt-4 mb-4">Un vin rouge de qualité, issu de cépages sélectionnés. Parfait pour accompagner vos plats principaux.</div>
+            <div class="price">6.99€</div>
+          </div>            
+          <div class="col-md-4">
+            <img src="{{asset('assets/img/vin.jpg')}}" alt="Vin rouge" class="rounded">
+          </div>
+      </div>
+  </div>
+  <hr>
+  <div class="dish ">
+      <div class="row d-flex align-items-center">
+          <div class="col-md-4">
+              <img src="{{asset('assets/img/cocktail.jpg')}}" alt="Cocktail" class="rounded">
+          </div>
+          <div class="col-md-8 text-center">
+              <div class="name">Cocktail du jour</div>
+              <div class="description mt-4 mb-4">Un cocktail rafraîchissant préparé par nos mixologues talentueux. Chaque jour, découvrez une nouvelle création.</div>
+              <div class="price">8.99€</div>
+          </div>
+      </div>
+  </div>
+  <hr>
+  <div class="dish">
+      <div class="row d-flex align-items-center">
+          <div class="col-md-8 text-center">
+            <div class="name">Eau minérale</div>
+            <div class="description mt-4 mb-4">Une bouteille d'eau minérale gazeuse ou plate pour vous désaltérer.</div>
+            <div class="price">2.99€</div>
+          </div>            
+          <div class="col-md-4">
+            <img src="{{asset('assets/img/eau.jpg')}}" alt="Eau minérale" class="rounded">
+          </div>
+      </div>
+  </div>
+  <hr>
+  <div class="dish">
+      <div class="row d-flex align-items-center">
+          <div class="col-md-4">
+              <img src="{{asset('assets/img/the.jpg')}}" alt="Thé" class="rounded">
+          </div>
+          <div class="col-md-8 text-center">
+              <div class="name">Thé aromatisé</div>
+              <div class="description mt-4 mb-4">Une sélection de thés aromatisés aux saveurs variées, pour une pause détente parfumée.</div>
+              <div class="price">4.99€</div>
+          </div>
+      </div>
+  </div>
+  <hr>
+  
+<div class="dish">
+  <div class="row d-flex align-items-center">
+      <div class="col-md-8 text-center">
+        <div class="name">Café expresso</div>
+        <div class="description mt-4 mb-4">Un café expresso préparé avec des grains de café de qualité supérieure, offrant une saveur riche et intense.</div>
+        <div class="price">3.99€</div>
+      </div>            
+      <div class="col-md-4">
+        <img src="{{asset('assets/img/cafe.jpg')}}" alt="Café expresso" class="rounded">
+      </div>
+  </div>
+</div>
+<hr>
+<div class="dish ">
+  <div class="row d-flex align-items-center">
+      <div class="col-md-4">
+          <img src="{{asset('assets/img/jus_orange.jpg')}}" alt="Jus d'orange frais" class="rounded">
+      </div>
+      <div class="col-md-8 text-center">
+          <div class="name">Jus d'orange frais</div>
+          <div class="description mt-4 mb-4">Un délicieux jus d'orange fraîchement pressé, plein de vitamines et de saveurs naturelles.</div>
+          <div class="price">4.99€</div>
+      </div>
+  </div>
+</div>
+<hr>
+<div class="dish">
+  <div class="row d-flex align-items-center">
+      <div class="col-md-8 text-center">
+        <div class="name">Smoothie aux fruits</div>
+        <div class="description mt-4 mb-4">Un mélange rafraîchissant de fruits frais mixés, parfait pour faire le plein de vitamines et de saveurs naturelles.</div>
+        <div class="price">6.99€</div>
+      </div>            
+      <div class="col-md-4">
+        <img src="{{asset('assets/img/smoothie.jpg')}}" alt="Smoothie aux fruits" class="rounded">
+      </div>
+  </div>
+</div>
+<hr>
+<div class="dish">
+  <div class="row d-flex align-items-center">
+      <div class="col-md-4">
+          <img src="{{asset('assets/img/soda.jpg')}}" alt="Soda" class="rounded">
+      </div>
+      <div class="col-md-8 text-center">
+          <div class="name">Soda</div>
+          <div class="description mt-4 mb-4">Un choix de sodas rafraîchissants, avec différentes saveurs et options sans sucre ajouté.</div>
+          <div class="price">3.99€</div>
+      </div>
+  </div>
+</div>
+</div>   
+</div>
+
+<footer class="bg-primary">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="footer-text">&copy; 2023 Hôtel Grand Horizon. Tous droits réservés.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a href="#" class="scroll-to-top" title="Remonter en haut de la page">&#8593;</a>
+  <script src="{{ asset('assets/js/restaurant.js')}}"></script>
+  <script src="{{ asset('assets/js/main.js')}}"></script>
+ {% endblock body %}

@@ -1,0 +1,85 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AppController!{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <h1 class="text-center mt-4 mb-4 titre titre-page">Chambres haut de gamme</h1>
+    <p class="lead text-center">Des espaces élégants et raffinés pour un séjour inoubliable.</p>
+
+    <div class="text-center">
+        <img src="{{ asset('assets/img/chambre.jpg') }}" alt="Image 1" class="img-resto rounded">
+        <p class="mt-3">Découvrez nos chambres haut de gamme, un mélange parfait de confort, de style et d'élégance, où chaque détail a été pensé pour créer un havre de paix lors de votre séjour.</p>
+    </div>
+
+    <div class="dish mt-4 mb-4">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-8 text-center">
+                <div class="description mt-4 mb-4">Nos chambres haut de gamme sont conçues pour répondre aux attentes des voyageurs les plus exigeants. Chaque détail a été soigneusement pensé pour vous offrir un espace élégant et raffiné, où le confort et la détente sont au rendez-vous. Des matériaux de qualité, une décoration moderne et des équipements haut de gamme sont autant d'éléments qui contribuent à créer une atmosphère unique et apaisante dans chaque chambre.</div>
+                <div class="description mt-4 mb-4">Chaque chambre est un havre de paix, offrant un espace spacieux et confortable pour vous reposer et vous ressourcer. Les lits moelleux et les draps luxueux vous garantissent des nuits de sommeil réparateur. Les salles de bains privatives sont équipées d'installations modernes et de produits de toilette de qualité pour votre confort.</div>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center">
+                <img src="{{ asset('assets/img/chambre2.jpg') }}" alt="Image chambre" class="resto-img rounded">
+            </div>
+        </div>
+    </div>
+
+    <div class="dish mt-4 mb-4">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-4 d-flex justify-content-center">
+                <img src="{{ asset('assets/img/chambre3.jpg') }}" alt="Image chambre" class="resto-img rounded">
+            </div>
+            <div class="col-md-8 text-center">
+                <div class="description mt-4 mb-4">Que vous soyez en voyage d'affaires ou en vacances, nos chambres sont conçues pour répondre à tous vos besoins. Un espace de travail fonctionnel, un accès Wi-Fi haut débit et une télévision à écran plat sont disponibles pour votre confort et votre divertissement. Profitez également des vues magnifiques sur la ville ou sur la nature environnante depuis certaines de nos chambres.</div>
+                <div class="description mt-4 mb-4">Nous nous efforçons de créer une atmosphère chaleureuse et accueillante dans chaque chambre. L'éclairage doux, les couleurs apaisantes et les éléments décoratifs bien choisis créent une ambiance propice à la détente et à la tranquillité d'esprit. Profitez également des équipements supplémentaires tels que le minibar, le coffre-fort et le service d'étage pour rendre votre séjour encore plus agréable.</div>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="text-center mt-4 mb-4">Les différents types de chambres</h2>
+    
+    <div class="container text-center mb-4">
+        <button onclick="showCard('Chambre Classique')" class="btn btn-primary text-warning rounded">Chambre Classique</button>
+        <button onclick="showCard('Chambre Confort')" class="btn btn-primary text-warning rounded">Chambre Confort</button>
+        <button onclick="showCard('Grande Suite')" class="btn btn-primary text-warning rounded">Grande Suite</button>
+    </div>
+
+    <div class="row dish mt-4 mb-4 align-items-stretch text-center">
+        {% for chambre in chambres %}
+        <div class="col-md-12 h-75 chambre-card" data-title="{{ chambre.titre }}">
+            <div class="card border-secondary shadow d-flex flex-column">
+                <div class="card-header bg-primary rounded">
+                    <img src="{{ asset('uploads/images/' ~ chambre.photo) }}" class="card-img-top rounded" alt="">
+                </div>
+                <div class="card-body bg-light">
+                    <h5 class="fw-bold fst-italic text-center text-dark">{{ chambre.titre }}</h5>
+                    <hr class="text-dark">
+                    <p class="text-center text-primary">{{ chambre.descritpionCourte|slice(0, 100) }}</p>
+                    <div class="card-footer">
+                        <p class="card-text text-center text-primary fw-bold">Prix: {{ chambre.prixJournalier / 100 }}€</p>
+                        <div class="text-center my-3">
+                            <a href="{{ path('show_chambre', { id: chambre.id }) }}" class="btn btn-primary text-warning rounded">Voir les détails</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+
+</div>
+<footer class="bg-primary">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="footer-text">&copy; 2023 Hôtel Grand Horizon. Tous droits réservés.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<a href="#" class="scroll-to-top" title="Remonter en haut de la page">&#8593;</a>
+<script src="{{ asset('assets/js/chambre.js')}}"></script>
+<script src="{{ asset('assets/js/main.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,128 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    À propos - Historique 
+{% endblock title %}
+
+{% block body %}
+
+<div class="jumbotron jumbotron-fluid custom-jumbotron">
+    <div class="container text-center">
+      <h1 class="titre mt-4 mb-4 titre-page">Hôtel Grand Horizon</h1>
+      <p class="lead">Une référence de grand standing au cœur de Paris</p>
+    </div>
+  </div>
+
+  <div class="text-center">
+    <img src="{{ asset('assets/img/hotel.jpg') }}" alt="Image 1" class="img-resto rounded">
+    
+</div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 class="section-heading text-center mt-5">Historique</h2>
+        <p class="section-description text-center">Découvrez l'histoire de l'Hôtel Grand Horizon, une icône de l'hôtellerie de luxe à Paris.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h2>1890 - Fondation</h2>
+              <p>En 1890, Vincent Ferreira, un visionnaire passionné par l'hôtellerie, le coloriage et la boucherie, acquiert un terrain au cœur de Paris pour y construire un établissement qui incarnera l'élégance et le raffinement.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h2>1895 - Ouverture</h2>
+              <p>Après plusieurs années de travaux, l'Hôtel Grand Horizon ouvre ses portes en 1895, devenant rapidement une référence en matière de grand standing et attirant les regards par sa façade majestueuse et son architecture néoclassique.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h2>XXe siècle - Renommée internationale</h2>
+              <p>Au fil des décennies, l'Hôtel Grand Horizon accueille de nombreuses personnalités éminentes, des célébrités du cinéma, des artistes renommés et des hommes d'affaires internationaux, renforçant ainsi sa réputation et son prestige.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h2>2019 - Acquisition par Horizon Hospitality</h2>
+              <p>En 2019, l'Hôtel Grand Horizon est acquis par le groupe hôtelier renommé, Horizon Hospitality, qui entreprend une rénovation majeure pour préserver l'essence historique de l'établissement tout en y ajoutant une touche contemporaine.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h2>2023 - Réouverture</h2>
+              <p>Après des mois de rénovation minutieuse, l'Hôtel Grand Horizon rouvre ses portes en mai 2023, devenant une nouvelle référence de grand standing à Paris, offrant à ses clients une expérience inégalée de luxe, de confort et de bien-être.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+  
+  
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-heading">À propos de l'hôtel Grand Horizon</h2>
+        <p class="section-description">À l'hôtel Grand Horizon, notre priorité absolue est de vous offrir un service impeccable et personnalisé. Notre équipe dévouée et professionnelle est à votre disposition 24h/24 pour répondre à tous vos besoins et rendre votre séjour aussi agréable que possible.</p>
+        <p>Que vous soyez ici pour affaires ou pour le plaisir, nous nous efforçons de créer une expérience mémorable. Notre objectif est de surpasser vos attentes en termes de luxe, de confort et d'élégance. Nous vous promettons un séjour inoubliable où chaque détail est soigneusement pris en compte pour vous offrir le meilleur service possible.</p>
+        <ul class="list-unstyled">
+          <li><i class="fas fa-check-circle"></i> Des chambres haut de gamme conçues pour répondre aux attentes des voyageurs les plus exigeants.</li>
+          <li><i class="fas fa-check-circle"></i> Un restaurant gastronomique où notre talentueux chef crée des plats savoureux à partir de produits frais et de saison.</li>
+          <li><i class="fas fa-check-circle"></i> Un service spa exclusif offrant une gamme complète de soins et de massages relaxants pour votre bien-être.</li>
+          <li><i class="fas fa-check-circle"></i> Un environnement calme et apaisant où vous pourrez vous détendre et profiter de votre séjour.</li>
+          <li><i class="fas fa-check-circle"></i> Une équipe dévouée, attentionnée et multilingue prête à vous assister dans toutes vos demandes.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <hr>
+  <section class="text-center mb-5">
+    <h2 class="text-center mt-4 mb-4">Plan d'accès</h2>
+    <div class="map-container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1563.5554499722343!2d2.5482244794761706!3d48.77088621605763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e60952d7d4163d%3A0x990ca1dc1dde5a32!2s26%20Rue%20Jean%20Rostand%2C%2094880%20Noiseau!5e0!3m2!1sfr!2sfr!4v1687772643352!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+  <hr>
+  <section>
+    <div class="container">
+        <div class="form-container">
+          <h2 class="text-center">Contactez-nous</h2>
+          <form>
+            <div class="form-group">
+              <label for="name">Nom :</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+    
+            <div class="form-group">
+              <label for="email">Adresse e-mail :</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+    
+            <div class="form-group">
+              <label for="message">Message :</label>
+              <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+            </div>
+    
+            <button type="submit" class="btn btn-primary">Envoyer</button>
+          </form>
+        </div>
+      </div>
+  </section>
+ </div>   
+<footer class="bg-primary">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="footer-text">&copy; 2023 Hôtel Grand Horizon. Tous droits réservés.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a href="#" class="scroll-to-top" title="Remonter en haut de la page">&#8593;</a>
+  <script src="{{ asset('assets/js/main.js')}}"></script>
+{% endblock body %}

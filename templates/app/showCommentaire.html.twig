@@ -1,0 +1,104 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Commentaires{% endblock %}
+
+{% block body %}
+
+    <h1 class="text-center mt-4 mb-4 titre">Historique des commentaires</h1>
+    <div class="text-center">
+        {# <a class="btn btn-primary text-warning rounded mb-4" href="{{path('form_commentaire')}}">Ajouter un Commentaire</a> #}
+        <a class="btn btn-primary text-warning rounded mb-4" href="" id="btnAjouterCommentaire">Ajouter un Commentaire</a>
+    </div>
+
+    <div id="formulaireCommentaire" class="mb-5 container" style="display: none;">
+        <h2 class="text-center mt-4">Laissez nous un commentaire</h2>
+
+        {{ form_start(form) }}
+        <div class="row mx-3">
+            <div class="col-md-6">
+              {{ form_row(form.prenom) }}
+            </div>
+            <div class="col-md-6">
+            {{ form_row(form.nom)}}
+            </div>
+            <div class="col-md-6"> 
+            {{ form_row(form.email)}}
+            </div>
+            <div class="col-md-6"> 
+            {{ form_row(form.note)}}
+            </div>
+            {{ form_row(form.contenu)}}
+        </div>
+        <div class="text-center">
+            <button class="btn btn-primary mt-2 rounded text-warning" type="submit">Valider</button>
+        </div>
+        {{ form_end(form) }}
+    </div>
+    
+
+    {% for commentaire in commentaires %}
+    <div class="commentaire-card mb-12 text-center mb-4 " id="massage-relaxant">
+        <h3>{{ commentaire.prenom }} {{commentaire.nom}}</h3>
+        <div class="dish">
+          <div class="row d-flex align-items-center">
+                       
+            <div class="col-md-4">
+                <div class="name">{{commentaire.email}}</div>
+                <div class="price mt-3 mb-3">{{ commentaire.dateEnregistrement|date('d/m/Y H:i:s') }}</div>
+                {% if commentaire.note == 1 %}
+                <div><i class="fa-solid fa-star text-warning"></i></div>
+                {% elseif commentaire.note == 2 %}
+                <div>
+                    <i class="fa-solid fa-star text-warning"></i>
+                    <i class="fa-solid fa-star text-warning"></i>
+                </div>
+
+                {% elseif commentaire.note == 3 %}
+                <div>
+                    <i class="fa-solid fa-star text-warning"></i>
+                    <i class="fa-solid fa-star text-warning"></i>
+                    <i class="fa-solid fa-star text-warning"></i>
+                </div>
+                {% elseif commentaire.note == 4 %}
+                <div>
+                    <i class="fa-solid fa-star text-warning"></i>
+                    <i class="fa-solid fa-star text-warning"></i>
+                    <i class="fa-solid fa-star text-warning"></i>
+                    <i class="fa-solid fa-star text-warning"></i>
+                </div>
+                {% elseif commentaire.note == 5 %}
+                <div>
+                    <i class="fa-solid fa-star text-warning"></i>
+                    <i class="fa-solid fa-star text-warning"></i>
+                    <i class="fa-solid fa-star text-warning"></i>
+                    <i class="fa-solid fa-star text-warning"></i>
+                    <i class="fa-solid fa-star text-warning"></i>
+                </div>
+                {% else %}
+                
+                {% endif %}             
+            </div>
+            <div class="col-md-8 text-center">
+              <div class="description mt-4 mb-4">{{commentaire.contenu|raw}}</div>
+            </div> 
+          </div>
+        </div>
+    </div>
+    {% endfor %}
+
+    <footer class="bg-primary">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <p class="footer-text">&copy; 2023 Hôtel Grand Horizon. Tous droits réservés.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+
+      <a href="#" class="scroll-to-top" title="Remonter en haut de la page">&#8593;</a>
+      <script src="{{ asset('assets/js/main.js')}}"></script>
+      <script src="{{ asset('assets/js/formComment.js')}}"></script>
+</body>
+{% endblock %}

@@ -1,0 +1,76 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+    {{chambre.titre}}
+{% endblock title %}
+
+{% block body %}
+
+{% for flashMessage in app.flashes('danger') %}
+    <div class="alert alert-danger text-center">
+        {{ flashMessage }}
+    </div>
+{% endfor %}
+
+
+<div class="text-center container mb-5">
+    <h1 class="text-center mt-4 mb-4 titre titre-page">{{chambre.titre}}</h1>
+    <p class="mt-3 lead">{{chambre.descritpionCourte}}</p>
+    <img src="{{ asset('uploads/images/' ~ chambre.photo) }}" alt="Image 1" class="img-resto rounded">
+    
+
+    <p class="mt-3">{{chambre.descriptionLongue|raw}}</p>
+    <div class="btn-price mt-5">
+        <p class="fw-bold h5">Prix Journalier : {{chambre.prixJournalier / 100}}€</p>
+    </div>
+    <hr>    
+    {# <a href="{{ path('form_commande', {id: chambre.id}) }}" class="btn btn-primary text-warning rounded">Reservez-votre chambre</a> #}
+
+    <a href="" id="btnAjouterCommentaire" class="btn btn-primary text-warning rounded">Reservez-votre chambre</a>
+
+
+    <div id="formulaireCommentaire" class="mb-5 mt-5 container" style="display: none;">
+
+      {{ form_start(commandeForm) }}
+      <div class="row mx-3">
+        <p class="text-center mb-4 h4">Vos coordonnées</p>
+            <div class="cold-md-6">
+                {{ form_row(commandeForm.prenom) }}
+            </div>
+            <div class="cold-md-6">
+                {{ form_row(commandeForm.nom) }}
+            </div>
+            <div class="cold-md-6">
+                {{ form_row(commandeForm.telephone) }}
+            </div>
+            <div class="cold-md-6">
+                {{ form_row(commandeForm.email) }}
+            </div>     
+            <p class="text-center h4 mt-2">Choisissez vos dates</p>       
+                {{ form_row(commandeForm.date_arrivee) }}
+                        
+                {{ form_row(commandeForm.date_depart) }}
+        </div>                
+            <div class="text-center">
+                <button class="btn btn-primary text-warning rounded mt-4" type="submit">Valider</button>
+            </div>
+        
+        {{ form_end(commandeForm) }}
+    
+    </div>
+</div>
+    
+<footer class="bg-primary">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="footer-text">&copy; 2023 Hôtel Grand Horizon. Tous droits réservés.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a href="#" class="scroll-to-top" title="Remonter en haut de la page">&#8593;</a>
+  <script src="{{ asset('assets/js/main.js')}}"></script>
+  <script src="{{ asset('assets/js/formComment.js')}}"></script>
+
+{% endblock body %}
