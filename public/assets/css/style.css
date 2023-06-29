@@ -132,6 +132,12 @@ footer {
     padding: 20px 0;
 }
 
+.footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .footer-text {
     text-align: center;
     font-size: 14px;

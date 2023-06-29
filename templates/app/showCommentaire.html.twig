@@ -35,6 +35,7 @@
                     <i class="fa-solid fa-star text-warning"></i>
                     <i class="fa-solid fa-star text-warning"></i>
                     <i class="fa-solid fa-star text-warning"></i>
+                    <i class="fa-regular fa-star"></i>
                 </div>
                 {% elseif commentaire.note == 5 %}
                 <div>
@@ -86,15 +87,19 @@
     </div>
 
     <footer class="bg-primary">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <p class="footer-text">&copy; 2023 Hôtel Grand Horizon. Tous droits réservés.</p>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="footer-text my-3">&copy; 2023 Hôtel Grand Horizon. Tous droits réservés.</p>
+            <div class="footer-icons">
+              <a href="" target="_blank" class="social-icon"><i class="fa-brands fa-square-facebook text-warning"></i></a>
+              <a href="" target="_blank" class="social-icon"><i class="fa-brands fa-instagram text-warning"></i></a>
             </div>
           </div>
         </div>
-      </footer>
-
+      </div>
+    </footer>
+ 
 
       <a href="#" class="scroll-to-top" title="Remonter en haut de la page">&#8593;</a>
       <script src="{{ asset('assets/js/main.js')}}"></script>

@@ -25,14 +25,14 @@ class ContactController extends AbstractController
 
             // $name = $data['name'];
             // $firstname = $data['firstname'];
-            // $address = $data['email'];
+            $address = $data['email'];
             $subject = $data['subject'];
             $content = $data['message'];
             // $category = $data['category'];
 
 
             $email = (new Email())
-                ->from('maxime.b2494@gmail.com')
+                ->from('grandHorizon@hotel.com')
                 ->to('maxime.b2494@gmail.com')
                 // ->name($name)
                 // ->firstname($firstname)
