@@ -53,8 +53,6 @@ class AppController extends AbstractController
         return $this->render('app/actualites.html.twig');
     }
 
-    
-
     // ###################  CHAMBRE ########################
 
     #[Route('/chambre', name: 'chambre')]
@@ -116,55 +114,6 @@ class AppController extends AbstractController
 
     // ###################  COMMANDE ########################
 
-
-    // #[Route('app/formCommande/{id}', name: 'form_commande')]
-    // public function formCommande(EntityManagerInterface $manager, Request $request, Chambre $chambre = null, Commande $commande = null): Response
-    // {
-        
-    //     if ($commande == null) {
-    //         $commande = new Commande();
-    //         $commande->setDateArrivee(new \DateTime());
-    //         $commande->setDateDepart(new DateTime());
-    //         $commande->setChambre($chambre);
-    //     }
-        
-    //     $form = $this->createForm(CommandeType::class, $commande);
-    //     $form->handleRequest($request);
-
-    //     if ($form->isSubmitted() && $form->isValid()) {
-
-    //         $arrivee = $commande->getDateArrivee();
-
-    //         if ($arrivee->diff($commande->getDateDepart())->invert == 1) {
-    //             $this->addFlash('danger', 'Une période de temps ne peut pas être négative.');
-    //             if ($commande->getId())
-    //                 return $this->redirectToRoute('show_commande');
-    //             else
-    //                 return $this->redirectToRoute('show_chambre', [
-    //                     'id' => $chambre->getId()
-    //                 ]);
-    //         }
-
-    //         $days = $arrivee->diff($commande->getDateDepart())->days;
-    //         $prixTotal = ($commande->getChambre()->getPrixJournalier() * $days) + $commande->getChambre()->getPrixJournalier();
-
-    //         $commande
-    //             ->setDateEnregistrement(new \DateTime())
-    //             ->setPrixTotal($prixTotal)
-    //             ->setChambre($chambre);
-                
-
-    //         $manager->persist($commande);
-    //         $manager->flush();
-
-    //         return $this->redirectToRoute('show_commande');
-    //     }
-
-    //     return $this->render('app/formCommande.html.twig', [
-    //         'chambre' => $chambre,
-    //         'commandeForm' => $form->createView(),
-    //     ]);
-    // }
 
     #[Route('/showcommande', name: 'show_commande')]
     public function admincommande(CommandeRepository $repo, EntityManagerInterface $manager)

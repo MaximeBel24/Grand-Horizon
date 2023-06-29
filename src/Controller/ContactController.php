@@ -23,21 +23,21 @@ class ContactController extends AbstractController
         {
             $data = $form->getData();
 
-            $name = $data['name'];
-            $firstname = $data['firstname'];
-            $address = $data['email'];
+            // $name = $data['name'];
+            // $firstname = $data['firstname'];
+            // $address = $data['email'];
             $subject = $data['subject'];
             $content = $data['message'];
-            $category = $data['category'];
+            // $category = $data['category'];
 
 
             $email = (new Email())
-                ->from($address)
-                ->to('admin@admin.fr')
-                ->name($name)
-                ->firstname($firstname)
+                ->from('maxime.b2494@gmail.com')
+                ->to('maxime.b2494@gmail.com')
+                // ->name($name)
+                // ->firstname($firstname)
                 ->subject($subject)
-                ->category($category)
+                // ->category($category)
                 ->text($content);
 
             $mailer->send($email);

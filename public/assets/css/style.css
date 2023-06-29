@@ -92,6 +92,34 @@ body {
     border: 0;
   }
 
+  .map {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .legend {
+    margin-top: 20px;
+  }
+  .legend-item {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  .metro-line {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
+  .bus-stop {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #f8f9fa;
+    border-radius: 3px;
+    margin-right: 5px;
+  }
+
 /* CONTACT */
 
 .form-container {
@@ -299,3 +327,24 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
+/* NEWS */
+
+.news-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.news-date {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+.news-content {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+.news-footer {
+  font-style: italic;
+}
+
+
