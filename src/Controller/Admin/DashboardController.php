@@ -22,7 +22,7 @@ class DashboardController extends AbstractDashboardController
 
     }
 
-    #[Route('/yametekudasai', name: 'yametekudasai')]
+    #[Route('/monkeydluffy', name: 'monkeydluffy')]
     public function index(): Response
     {
         // return parent::index();

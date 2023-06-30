@@ -108,6 +108,7 @@ class AppController extends AbstractController
 
         return $this->render('app/showChambre.html.twig', [
             'chambre' => $chambre,
+            'commande' => $commande,
             'commandeForm' => $form->createView(),
         ]);
     }

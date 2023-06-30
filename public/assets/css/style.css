@@ -372,3 +372,6 @@ footer {
   max-width: 35vw;
 }
 
+.articles{
+  min-height: 500px;
+}

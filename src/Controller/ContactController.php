@@ -14,35 +14,34 @@ class ContactController extends AbstractController
 {
     #[Route('/contact', name: 'contact')]
     public function index(Request $request, MailerInterface $mailer): Response
-{
-    $form = $this->createForm(ContactType::class);
+    {
+        $form = $this->createForm(ContactType::class);
 
-    $form->handleRequest($request);
+        $form->handleRequest($request);
 
-    if ($form->isSubmitted() && $form->isValid()) {
-        $data = $form->getData();
+        if ($form->isSubmitted() && $form->isValid()) {
+            $data = $form->getData();
 
-        $userEmail = $data['userEmail'];
-        $firstName = $data['firstName'];
-        $lastName = $data['lastName'];
-        $subject = $data['subject'];
-        $content = $data['message'];
+            $userEmail = $data['userEmail'];
+            $firstName = $data['firstName'];
+            $lastName = $data['lastName'];
+            $subject = $data['subject'];
+            $content = $data['message'];
 
-        $email = (new Email())
-            ->from('GrandHorizon@hotel.com')
-            ->to('maxime.b2494@gmail.com')
-            ->subject($subject)
-            ->text("$userEmail \n\n Bonjour Madame, Monsieur,\n\nJe suis $firstName $lastName.\n\n$content");
+            $email = (new Email())
+                ->from('GrandHorizon@hotel.com')
+                ->to('maxime.b2494@gmail.com')
+                ->subject($subject)
+                ->text("$userEmail \n\n Bonjour Madame, Monsieur,\n\nJe suis $firstName $lastName.\n\n$content");
 
-        $mailer->send($email);
+            $mailer->send($email);
 
-        return $this->redirectToRoute('contact');
+            return $this->redirectToRoute('contact');
+        }
+
+        return $this->renderForm('contact/index.html.twig', [
+            'controller_name' => 'ContactController',
+            'form' => $form
+        ]);
     }
-
-    return $this->renderForm('contact/index.html.twig', [
-        'controller_name' => 'ContactController',
-        'form' => $form
-    ]);
-}
-
 }

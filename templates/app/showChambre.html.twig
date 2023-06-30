@@ -1,7 +1,7 @@
 {% extends "base.html.twig" %}
-
+    
 {% block title %}
-    {{chambre.titre}}
+Grand Horizon - Chambre
 {% endblock title %}
 
 {% block body %}
@@ -50,6 +50,8 @@
                 {{ form_row(commandeForm.date_arrivee) }}
                         
                 {{ form_row(commandeForm.date_depart) }}
+
+            <p>Prix total : {{commande.prixTotal }}€</p>
         </div>                
             <div class="text-center">
                 <button class="btn btn-primary text-warning rounded mt-4" type="submit">Valider</button>
