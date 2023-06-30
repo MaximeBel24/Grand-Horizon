@@ -52,6 +52,14 @@ body {
   max-width: 350px;
 }
 
+.map-accueil {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 20vw;
+}
+
 
 
 .card-accueil .card-header{
@@ -353,4 +361,14 @@ footer {
   font-style: italic;
 }
 
+/* ACTUALITES */
+
+.container-actu{
+  display: flex;
+  gap: 30px;
+}
+
+.actu{
+  max-width: 35vw;
+}
 

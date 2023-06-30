@@ -27,6 +27,8 @@ class CommentaireCrudController extends AbstractCrudController
             TextField::new('email'),
             TextEditorField::new('contenu'),
             ChoiceField::new('note')->setChoices(['0' => '0', '1' =>'1', '2'=>'2', '3'=>'3', '4'=>'4', '5'=>'5']),
+            ChoiceField::new('category')->setChoices(['L\'hotel' => 'L\'hotel', 'Chambres' =>'Chambres', 'Restaurant'=>'Restaurant', 'Spa'=>'Spa', 'Autre'=>'Autre', '5'=>'5']),
+
             DateTimeField::new('date_enregistrement')->setFormat('d/M/Y à H:m:s')->hideOnForm(),
         ];
     }

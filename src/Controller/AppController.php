@@ -103,7 +103,7 @@ class AppController extends AbstractController
             $manager->persist($commande);
             $manager->flush();
 
-            return $this->redirectToRoute('show_commande');
+            return $this->redirectToRoute('chambre');
         }
 
         return $this->render('app/showChambre.html.twig', [

@@ -58,11 +58,11 @@ class DashboardController extends AbstractDashboardController
         return [
             MenuItem::linkToDashboard('Dashboard', 'fa fa-home'),
             MenuItem::linkToCrud('Membre', 'fas fa-user', Membre::class),
-            MenuItem::subMenu('Grand Horizon', 'fa fa-newspaper')->setSubItems([        
-                MenuItem::linkToCrud('Chambre', 'fas fa-list', Chambre::class),
-                MenuItem::linkToCrud('Slider', 'fas fa-book', Slider::class),
-                MenuItem::linkToCrud('Commande', 'fas fa-book', Commande::class),
-                MenuItem::linkToCrud('Commentaire', 'fas fa-book', Commentaire::class),
+            MenuItem::subMenu('Grand Horizon', 'fas fa-list')->setSubItems([        
+                MenuItem::linkToCrud('Chambre', 'fa-solid fa-bed', Chambre::class),
+                MenuItem::linkToCrud('Slider', 'fa-solid fa-image', Slider::class),
+                MenuItem::linkToCrud('Commande', 'fa-solid fa-cart-shopping', Commande::class),
+                MenuItem::linkToCrud('Commentaire', 'fa-regular fa-comment', Commentaire::class),
             ]),
             MenuItem::section('Retour au site'),
             MenuItem::linkToRoute('Accueil du site', 'fa fa-igloo', 'home'),

@@ -32,6 +32,9 @@ class Commentaire
     #[ORM\Column]
     private ?int $note = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $category = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -105,6 +108,18 @@ class Commentaire
     public function setNote(int $note): static
     {
         $this->note = $note;
+
+        return $this;
+    }
+
+    public function getCategory(): ?string
+    {
+        return $this->category;
+    }
+
+    public function setCategory(string $category): static
+    {
+        $this->category = $category;
 
         return $this;
     }

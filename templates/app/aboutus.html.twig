@@ -87,38 +87,47 @@
       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d567.9962641918517!2d2.4147663367547!3d48.85927463551934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1688050156640!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </section>
-  <div class="container mb-5">
-    <div class="map">
-      <h2>Plan d'accès</h2>
-      <div class="metro-line" style="background-color: #ff0000;"></div> Ligne 1 (rouge) : Station Central<br>
-      <div class="metro-line" style="background-color: #0000ff;"></div> Ligne 2 (bleue) : Station Riverside<br>
-      <div class="metro-line" style="background-color: #00ff00;"></div> Ligne 3 (verte) : Station Parkview<br><br>
-      <div class="bus-stop">A</div> Arrêt City Center<br>
-      <div class="bus-stop">B</div> Arrêt Pine Street<br>
-      <div class="bus-stop">C</div> Arrêt Oak Avenue<br>
-      <div class="legend">
-        <div class="legend-item">
-          <div class="metro-line" style="background-color: #ff0000;"></div>
-          Ligne de métro
-        </div>
-        <div class="legend-item">
-          <div class="bus-stop">A</div>
-          Arrêt de bus
-        </div>
+ 
+<div class="container mb-5">
+  <div class="map text-center">
+    <h2>Plan d'accès</h2>
+    <div class="metro-line"></div> Ligne 1 : Station Central<br>
+    <div class="metro-line"></div> Ligne 2 : Station Riverside<br>
+    <div class="metro-line"></div> Ligne 3 : Station Parkview<br><br>
+    <div class="bus-stop">A</div> Arrêt City Center : Le bus s'arrête à cet endroit. Vous pouvez prendre les bus des lignes 1, 2 et 3 à partir de cet arrêt.<br>
+    <div class="bus-stop">B</div> Arrêt Pine Street : Le bus s'arrête à cet endroit. Vous pouvez prendre les bus des lignes 2 et 3 à partir de cet arrêt.<br>
+    <div class="bus-stop">C</div> Arrêt Oak Avenue : Le bus s'arrête à cet endroit. Vous pouvez prendre le bus de la ligne 3 à partir de cet arrêt.<br><br>
+    <div class="legend">
+      <div class="legend-item">
+        <div class="metro-line"></div>
+        Ligne de métro : Les lignes de métro sont représentées par ces lignes colorées sur la carte.
+      </div>
+      <div class="legend-item">
+        <div class="bus-stop">A</div>
+        Arrêt de bus : Les arrêts de bus sont marqués par ces lettres sur la carte.
       </div>
     </div>
   </div>
+</div>
   
  </div>   
-<footer class="bg-primary">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <p class="footer-text">&copy; 2023 Hôtel Grand Horizon. Tous droits réservés.</p>
+ <footer class="bg-primary">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="footer">
+        <div>
+        <p class="footer-text my-3">&copy; 2023 Hôtel Grand Horizon. Tous droits réservés.</p>
+      </div>
+        <div class="footer-icons">
+          <a href="https://fr-fr.facebook.com/" target="_blank" class="social-icon"><i class="fa-brands fa-facebook text-warning fa-2xl"></i></a>
+          <a href="https://www.instagram.com/" target="_blank" class="social-icon"><i class="fa-brands fa-instagram text-warning fa-2xl"></i></a>
         </div>
       </div>
+      </div>
     </div>
-  </footer>
+  </div>
+</footer>
   <a href="#" class="scroll-to-top" title="Remonter en haut de la page">&#8593;</a>
   <script src="{{ asset('assets/js/main.js')}}"></script>
 {% endblock body %}

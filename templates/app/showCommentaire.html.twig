@@ -14,13 +14,21 @@
                        
             <div class="col-md-4">
                 <div class="name">{{commentaire.email}}</div>
+                <div class="name mt-2">{{commentaire.category}}</div>
                 <div class="price mt-3 mb-3">{{ commentaire.dateEnregistrement|date('d/m/Y H:i:s') }}</div>
                 {% if commentaire.note == 1 %}
                 <div><i class="fa-solid fa-star text-warning"></i></div>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
                 {% elseif commentaire.note == 2 %}
                 <div>
                     <i class="fa-solid fa-star text-warning"></i>
                     <i class="fa-solid fa-star text-warning"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
                 </div>
 
                 {% elseif commentaire.note == 3 %}
@@ -28,6 +36,8 @@
                     <i class="fa-solid fa-star text-warning"></i>
                     <i class="fa-solid fa-star text-warning"></i>
                     <i class="fa-solid fa-star text-warning"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
                 </div>
                 {% elseif commentaire.note == 4 %}
                 <div>
@@ -46,7 +56,11 @@
                     <i class="fa-solid fa-star text-warning"></i>
                 </div>
                 {% else %}
-                
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <i class="fa-regular fa-star"></i>
                 {% endif %}             
             </div>
             <div class="col-md-8 text-center">
@@ -78,6 +92,7 @@
             <div class="col-md-6"> 
             {{ form_row(form.note)}}
             </div>
+            {{ form_row(form.category)}}
             {{ form_row(form.contenu)}}
         </div>
         <div class="text-center">
@@ -90,11 +105,15 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
+            <div class="footer">
+            <div>
             <p class="footer-text my-3">&copy; 2023 Hôtel Grand Horizon. Tous droits réservés.</p>
+          </div>
             <div class="footer-icons">
-              <a href="" target="_blank" class="social-icon"><i class="fa-brands fa-square-facebook text-warning"></i></a>
-              <a href="" target="_blank" class="social-icon"><i class="fa-brands fa-instagram text-warning"></i></a>
+              <a href="https://fr-fr.facebook.com/" target="_blank" class="social-icon"><i class="fa-brands fa-facebook text-warning fa-2xl"></i></a>
+              <a href="https://www.instagram.com/" target="_blank" class="social-icon"><i class="fa-brands fa-instagram text-warning fa-2xl"></i></a>
             </div>
+          </div>
           </div>
         </div>
       </div>

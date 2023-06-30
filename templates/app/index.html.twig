@@ -44,58 +44,53 @@
     <div class="row mt-5 container-card">
       <div class="container d-flex justify-content-center">
 
-        <div class="col-12 col-md-3 m-3 card-accueil">
-          <div class="card bg-primary mb-3 h-100 rounded">
-            <div class="card-header text-center text-warning d-flex flex-column">
+        <div class="col-12 col-md-3 m-3 map-accueil">
+          <div class="mb-3 h-100 rounded">
+            <div class="text-center text-warning d-flex flex-column">
               <a href="{{path('chambre')}}" class="text-center">
-              <img src="{{asset('assets/img/chambre.jpg')}}" alt="Chambres haut de gamme" class="img-accueil img-fluid mt-3">
+              <img src="{{asset('assets/img/chambre.jpg')}}" alt="Chambres haut de gamme" class="img-accueil img-fluid">
               </a>
-              <a href="{{path('chambre')}}" class="mt-4 mb-4 h3 accueil-link">Chambres haut de gamme</a>
-            </div>
-            <div class="card-body bg-light">
-              <p>Nos chambres haut de gamme offrent une vue spectaculaire sur les eaux cristallines de l'océan, vous permettant de vous réveiller chaque matin avec une sensation de paix et de sérénité. Chaque détail a été soigneusement pensé pour vous offrir un espace élégant et raffiné, où le confort et la détente sont au rendez-vous. Des matériaux de qualité, une décoration tropicale et des équipements haut de gamme sont autant d'éléments qui contribuent à créer une atmosphère luxueuse et apaisante dans chaque chambre</p>
-            </div>
-            <div class="card-footer bg-primary">
-              <div class="text-center my-3">
-                <a href="{{path('chambre')}}" class="mt-4 mb-4 h3 btn btn-warning text-center rounded text-primary">Plus d'info</a>
+              <a href="{{path('chambre')}}" class="h3 accueil-link titre my-4">Chambres haut de gamme</a>
+              <div class="text-primary">         
+                <p>Nos chambres haut de gamme offrent une vue spectaculaire sur les eaux cristallines de l'océan, vous permettant de vous réveiller chaque matin avec une sensation de paix et de sérénité. Chaque détail a été soigneusement pensé pour vous offrir un espace élégant et raffiné, où le confort et la détente sont au rendez-vous. Des matériaux de qualité, une décoration tropicale et des équipements haut de gamme sont autant d'éléments qui contribuent à créer une atmosphère luxueuse et apaisante dans chaque chambre</p>
+              </div> 
+              <div class="text-center mt-3">
+                <a href="{{path('chambre')}}" class="btn btn-warning text-center rounded text-primary">Plus d'info</a>
               </div>
-            </div>
+            </div>  
           </div>
         </div>
 
-        <div class="col-12 col-md-3 m-3 card-accueil">
-          <div class="card  bg-primary mb-3 h-100 rounded">
-            <div class="card-header text-center text-warning d-flex flex-column">
+        <div class="col-12 col-md-3 m-3 map-accueil">
+          <div class="mb-3 h-100 rounded">
+            <div class="text-center text-warning d-flex flex-column">
               <a href="{{path('restaurant')}}" class="text-center">
-                <img src="{{asset('assets/img/restaurant.jpg')}}" alt="Restaurant de qualité" class="img-fluid img-accueil mt-3">
+                <img src="{{asset('assets/img/restaurant.jpg')}}" alt="Restaurant de qualité" class="img-fluid img-accueil">
               </a>
-              <a href="{{path('restaurant')}}" class="mt-4 mb-4 h3 accueil-link text-center">Restaurant de qualité</a>
-            </div>
-            <div class="card-body bg-light">
-              <p>Notre restaurant vous propose une expérience culinaire exquise et unique. Notre chef talentueux utilise avec passion des ingrédients locaux soigneusement sélectionnés ainsi que des fruits de mer frais pour créer des plats délicieux qui éveilleront vos papilles. Que vous choisissiez de dîner en plein air, profitant d'une vue panoramique sur la plage, ou dans notre élégante salle à manger, notre restaurant vous promet un voyage gastronomique inoubliable, alliant saveurs audacieuses et présentations artistiques.</p>
-            </div>
-            <div class="card-footer bg-primary">
-              <div class="text-center my-3">
-                <a href="{{path('restaurant')}}" class="mt-4 mb-4 h3 btn btn-warning text-center rounded text-primary">Plus d'info</a>
+              <a href="{{path('restaurant')}}" class="h3 accueil-link text-center titre my-4">Restaurant de qualité</a>
+              <div class="text-primary">                       
+                <p>Notre restaurant vous propose une expérience culinaire exquise et unique. Notre chef talentueux utilise avec passion des ingrédients locaux soigneusement sélectionnés ainsi que des fruits de mer frais pour créer des plats délicieux qui éveilleront vos papilles. Que vous choisissiez de dîner en plein air, profitant d'une vue panoramique sur la plage, ou dans notre élégante salle à manger, notre restaurant vous promet un voyage gastronomique inoubliable, alliant saveurs audacieuses et présentations artistiques.</p>
+              </div>
+              <div class="text-center mt-3">
+                <a href="{{path('restaurant')}}" class="btn btn-warning text-center rounded text-primary">Plus d'info</a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="col-12 col-md-3 m-3 card-accueil">
-          <div class="card  bg-primary mb-3 h-100 rounded">
-            <div class="card-header text-center text-warning d-flex flex-column mt-3">
+        <div class="col-12 col-md-3 m-3 map-accueil">
+          <div class="mb-3 h-100 rounded">
+            <div class="text-center text-warning d-flex flex-column">
               <a href="{{path('spa')}}" class="text-center">
                 <img src="{{asset('assets/img/spa.jpg')}}" alt="Service spa" class="img-accueil img-fluid">
               </a>
-              <a href="{{path('spa')}}" class="mt-4 mb-4 h3 accueil-link text-center">Service spa de luxe</a>
+              <a href="{{path('spa')}}" class="h3 accueil-link text-center titre my-4">Service spa de luxe</a>
             </div>
-            <div class="card-body bg-light">
-              <p>Détendez-vous et laissez-vous choyer dans notre somptueux spa de luxe. Notre équipe expérimentée de thérapeutes qualifiés vous invite à découvrir une gamme complète de soins et de massages inspirés par la nature tropicale environnante. Imprégnez-vous des douces brises marines tandis que les senteurs envoûtantes vous transportent vers un état de relaxation profonde, où le stress et les soucis s'évanouissent comme par magie. Profitez d'un havre de paix où votre bien-être est notre priorité absolue.</p>
+            <div class="text-primary text-center">
+              <p>Détendez-vous et laissez-vous choyer dans notre somptueux spa de luxe. Notre équipe expérimentée de thérapeutes qualifiés vous invite à découvrir une gamme complète de soins et de massages inspirés par la nature tropicale environnante. Imprégnez-vous des douces brises marines tandis que les senteurs envoûtantes vous transportent vers un état de relaxation profonde, où le stress et les soucis s'évanouissent comme par magie. Profitez d'un havre de paix où votre bien-être est notre priorité. Plongez dans l'opulence totale et la sérénité ultime</p>
             </div>
-            <div class="card-footer bg-primary">
-              <div class="text-center my-3">
-                <a href="{{path('spa')}}" class="mt-4 mb-4 h3 btn btn-warning text-center rounded text-primary">Plus d'info</a>
+              <div class="text-center mt-3">
+                <a href="{{path('spa')}}" class="btn btn-warning text-center rounded text-primary">Plus d'info</a>
               </div>
             </div>
           </div>
@@ -133,6 +128,6 @@
     </div>
   </div>
 </footer>
-  <a href="#" class="scroll-to-top" title="Remonter en haut de la page">&#8593;</a>
-  <script src="{{ asset('assets/js/main.js')}}"></script>
+<a href="#" class="scroll-to-top" title="Remonter en haut de la page">&#8593;</a>
+<script src="{{ asset('assets/js/main.js')}}"></script>
 {% endblock %}

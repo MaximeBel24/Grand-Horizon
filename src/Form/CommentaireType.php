@@ -29,6 +29,18 @@ class CommentaireType extends AbstractType
 
                 ]
             ])
+            ->add('category', ChoiceType::class, [
+                'label' => 'Catégorie',
+                'choices' => [
+                    'L\'hotel' => 'L\'hotel',
+                    'Chambres' => 'Chambres',
+                    'Restaurant' => 'Restaurant',
+                    'Spa' => 'Spa',
+                    'Autre' => 'Autre'
+                
+                ],
+                'placeholder' => 'Sélectionnez une catégorie',
+            ])
         ;
     }
 
